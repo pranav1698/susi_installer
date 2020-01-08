@@ -82,7 +82,7 @@ CORAL=0
 # the other repos. And if we build from susi_installer:development, we use
 # the development branch of the others.
 # For other branches than master and development, we use the "development" branch
-INSTALLBRANCH=master
+INSTALLBRANCH=test_master
 if [ -d "$INSTALLERDIR/.git" ] ; then
     pushd "$INSTALLERDIR"
     CURRENTBRANCH=$(git rev-parse --abbrev-ref HEAD)
@@ -357,7 +357,7 @@ if [ ! -d "raspi" ] ; then
     # the install.sh script and runs it
     mkdir -p "$DESTDIR"
     cd "$DESTDIR"
-    git clone https://github.com/fossasia/susi_installer.git
+    git clone https://github.com/pranav1698/susi_installer.git
     cd susi_installer
     git checkout $SUSI_INSTALLER_BRANCH
     exec ./install.sh $saved_args
