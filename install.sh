@@ -351,7 +351,7 @@ fi
 # - when downloaded only by itself, it initiates the installation
 #   by downloading the installer and starting it
 # - when running the actual installer
-
+echo $SUSI_INSTALLER_BRANCH
 if [ ! -d "raspi" ] ; then
     # we are in initial installer mode, where the user only downloaded
     # the install.sh script and runs it
